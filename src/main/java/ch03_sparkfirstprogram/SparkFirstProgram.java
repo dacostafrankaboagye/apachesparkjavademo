@@ -52,8 +52,10 @@ public class SparkFirstProgram {
             System.out.println("Sum: " + sum);
 
 
-
-
+            // visualising in the web ui - we are using the scanner as a mechanism to wait so that the application do not terminate
+            try(final var scanner = new java.util.Scanner(System.in)) {
+                scanner.nextLine();
+            }
         }
         /*
         > for an actual actual cluster, like aws emr, spark will use the
